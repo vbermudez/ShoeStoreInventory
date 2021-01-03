@@ -76,3 +76,8 @@ Open the starter project in Android Studio
     * Observe the shoes variable from the ViewModel
     * Use DataBindingUtil to inflate the shoe_list layout
     * Add a new layout item into the scrollview for each shoe.
+
+## References
+
+   * Shoe SVG icon downloaded from [Icon Fonts](http://www.onlinewebfonts.com/icon), is licensed by CC BY 3.0.
+   * Shoe SVG icon was converted to Vector Drawable using [SVG 2 Vector](https://svg2vector.com/).

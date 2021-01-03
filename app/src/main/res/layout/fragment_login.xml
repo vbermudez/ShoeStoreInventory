@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.udacity.shoestore.navigation.LoginFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/big_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/shoe_icon" />
+
+        <TextView
+            android:id="@+id/emailLabel"
+            style="@style/normal_font"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginTop="@dimen/large_vertical_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:text="@string/email_address"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/emailAddressText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/emailAddressText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:layout_marginBottom="@dimen/large_vertical_margin"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintBottom_toTopOf="@+id/passwordLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/passwordLabel"
+            style="@style/normal_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:layout_marginBottom="@dimen/vertical_margin"
+            android:fontFamily="@font/roboto"
+            android:text="@string/password"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordText"
+            style="@style/normal_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:layout_marginBottom="@dimen/large_vertical_margin"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/createAccountButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/createAccountButton"
+            style="@style/normal_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:fontFamily="@font/roboto"
+            android:text="@string/create_account"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/loginButton"
+            app:layout_constraintEnd_toStartOf="@+id/loginButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/loginButton"
+            style="@style/normal_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_horizontal_margin"
+            android:layout_marginEnd="@dimen/large_horizontal_margin"
+            android:layout_marginBottom="@dimen/large_vertical_margin"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/createAccountButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
