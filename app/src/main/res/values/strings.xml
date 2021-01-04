@@ -5,8 +5,23 @@
     <string name="email_address">e-mail Address</string>
     <string name="password">Password</string>
     <string name="instructions">Instructions</string>
-    <string name="welcome_text_1">Welcome to Shoe Inventory App.\n\nFrom here, you can navigate to the instructions or the list of shoes.</string>
-    <string name="welcome_text_2">Please, select an action below</string>
+    <string name="welcome_text_1">Welcome to Shoe Inventory App.
+        From here, you can navigate to the instructions or the list of shoes.</string>
+    <string name="welcome_text_2">Press button to continue</string>
     <string name="shoes_list">Shoes List</string>
-    <string name="instructions">Instructions</string>
+    <string name="add_shoe">Add Shoe</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
+    <string name="instructions_text_1">Instruction ...</string>
+    <string name="instructions_text_2">Press button to continue</string>
+    <string name="logout">Logout</string>
+    <string name="title_login">Login</string>
+    <string name="title_welcome">Welcome!</string>
+    <string name="title_instructions">Some instructions</string>
+    <string name="title_shoes">Shoes list</string>
+    <string name="title_shoe_detail">Shoe detail</string>
 </resources>

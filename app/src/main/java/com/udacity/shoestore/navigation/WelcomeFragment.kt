@@ -2,6 +2,7 @@ package com.udacity.shoestore.navigation
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -15,14 +16,10 @@ class WelcomeFragment : Fragment() {
             R.layout.fragment_welcome, container, false)
 
         binding.instructionsButton.setOnClickListener {
-           // it.findNavController().navigate(WelcomeFragmentDirections.actionLoginFragment2ToWelcomeFragment())
+           it.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
         }
 
-        binding.shoeListButton.setOnClickListener {
-            //it.findNavController().navigate(WelcomeFragmentDirections.actionLoginFragment2ToWelcomeFragment())
-        }
-
-        setHasOptionsMenu(false)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_welcome)
 
         return binding.root
     }

@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.ShoesFragment">
 
+    <data>
+        <variable
+            name="ShoeViewModel"
+            type="com.udacity.shoestore.models.ShoeListViewModel" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,10 +17,24 @@
         android:id="@+id/shoesScroll">
 
         <LinearLayout
+            android:id="@+id/shoeListView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/addShoeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="20dp"
+                android:backgroundTint="#3F51B5"
+                android:clickable="true"
+                android:contentDescription="@string/add_shoe"
+                android:focusable="true"
+                android:src="@drawable/ic_add" />
         </LinearLayout>
+
+
     </ScrollView>
 </layout>

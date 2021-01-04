@@ -5,59 +5,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.WelcomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcomeConstraint"
+    <RelativeLayout
+        android:id="@+id/welcomeRelative"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/normal_padding">
 
 
         <TextView
             android:id="@+id/textView"
             style="@style/normal_font"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginTop="@dimen/large_vertical_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/vertical_margin"
-            android:text="@string/welcome_text_1"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text_1" />
 
         <TextView
             android:id="@+id/textView2"
             style="@style/normal_font"
-            android:layout_width="0dp"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/large_vertical_margin"
             android:text="@string/welcome_text_2"
-            app:layout_constraintBottom_toTopOf="@+id/instructionsButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/shoeListButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/large_vertical_margin"
-            android:text="@string/shoes_list"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/instructionsButton" />
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp" />
 
         <Button
             android:id="@+id/instructionsButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/roboto"
             android:text="@string/instructions"
-            app:layout_constraintBaseline_toBaselineOf="@+id/shoeListButton"
-            app:layout_constraintEnd_toStartOf="@+id/shoeListButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
 </layout>

@@ -6,29 +6,40 @@
     android:fillViewport="true"
     tools:context="com.udacity.shoestore.navigation.InstructionsFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcomeConstraint"
+    <RelativeLayout
+        android:id="@+id/welcomeRelative"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:padding="@dimen/normal_padding">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            style="@style/normal_font"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="@string/instructions_text_1" />
 
         <TextView
             android:id="@+id/textView2"
+            style="@style/normal_font"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/instructions_text_2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="80dp"/>
+
+        <Button
+            android:id="@+id/shoeListButton"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="214dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:fontFamily="@font/roboto"
+            android:text="@string/shoes_list"
+            android:textSize="@dimen/text_size" />
+    </RelativeLayout>
 </layout>

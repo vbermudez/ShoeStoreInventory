@@ -8,4 +8,5 @@
     <dimen name="large_vertical_margin">32dp</dimen>
     <dimen name="large_horizontal_margin">16dp</dimen>
     <dimen name="big_height">192dp</dimen>
+    <dimen name="normal_padding">40dp</dimen>
 </resources>

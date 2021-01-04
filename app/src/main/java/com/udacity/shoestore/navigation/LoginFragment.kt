@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -27,11 +28,11 @@ class LoginFragment : Fragment() {
             it.findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToWelcomeFragment())
         }
 
-        setHasOptionsMenu(false)
-
         if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             binding.imageView.visibility = View.INVISIBLE
         }
+
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_login)
 
         return binding.root
     }

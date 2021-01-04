@@ -2,6 +2,7 @@ package com.udacity.shoestore.navigation
 
 import android.os.Bundle
 import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -15,7 +16,12 @@ class InstructionsFragment : Fragment() {
         val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_instructions, container, false)
 
-        setHasOptionsMenu(true)
+        binding.shoeListButton.setOnClickListener {
+            it.findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoesFragment())
+        }
+
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.title_instructions)
+
         return binding.root
     }
 
