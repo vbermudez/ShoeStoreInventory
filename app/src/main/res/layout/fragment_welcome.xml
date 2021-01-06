@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+I have chosen a LinearLayout due to the simplicity of the interface.
+In this fragment, I needed to show only a set of TextView stacked vertically;
+and LinearLayout is the simplest solution for that kind of task.
+-->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.WelcomeFragment">
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/welcomeRelative"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/normal_padding">
-
+        android:padding="@dimen/normal_padding"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             style="@style/normal_font"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/welcome_text_1" />
@@ -22,24 +29,20 @@
         <TextView
             android:id="@+id/textView2"
             style="@style/normal_font"
+            android:layout_gravity="center_horizontal|center_vertical"
             android:textAlignment="center"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/welcome_text_2"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="80dp" />
+            android:layout_marginTop="@dimen/large_vertical_margin" />
 
         <Button
             android:id="@+id/instructionsButton"
-            style="@style/Widget.AppCompat.Button"
+            style="@style/normal_font"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/large_vertical_margin"
             android:layout_gravity="center_horizontal|center_vertical"
-            android:fontFamily="@font/roboto"
-            android:text="@string/instructions"
-            android:textSize="@dimen/text_size" />
-    </RelativeLayout>
+            android:text="@string/instructions" />
+    </LinearLayout>
 </layout>

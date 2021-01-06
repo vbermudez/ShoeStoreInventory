@@ -20,21 +20,20 @@
             android:id="@+id/shoeListView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="5dp" >
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/addShoeButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
-                android:layout_margin="20dp"
+                android:layout_margin="15dp"
                 android:backgroundTint="#3F51B5"
                 android:clickable="true"
                 android:contentDescription="@string/add_shoe"
                 android:focusable="true"
                 android:src="@drawable/ic_add" />
         </LinearLayout>
-
-
     </ScrollView>
 </layout>

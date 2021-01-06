@@ -16,7 +16,7 @@
     <string name="size">Size</string>
     <string name="company">Company</string>
     <string name="name">Name</string>
-    <string name="instructions_text_1">Instruction ...</string>
+    <string name="instructions_text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget eros sed est aliquam sagittis. Nullam non quam diam. Etiam laoreet semper enim sed porttitor. Pellentesque neque dolor, faucibus eu ligula id, hendrerit fermentum purus. Duis ac lacinia dolor, non dapibus ipsum. Morbi quis quam euismod, rutrum lacus sed, mollis velit...</string>
     <string name="instructions_text_2">Press button to continue</string>
     <string name="logout">Logout</string>
     <string name="title_login">Login</string>

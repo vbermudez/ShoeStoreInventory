@@ -1,121 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+I have chosen a LinearLayout due to the simplicity of the interface.
+In this fragment, I needed to show only a set of TextView + EditText stacked vertically;
+and LinearLayout is the simplest solution for that kind of task.
+I have included an anidated LinearLayout, with horizontal orientation, just to contain
+the action buttons.
+-->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.navigation.LoginFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/loginConstraint"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/normal_padding"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/big_height"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/shoe_icon" />
 
         <TextView
             android:id="@+id/emailLabel"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginTop="@dimen/large_vertical_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/vertical_margin"
-            android:fontFamily="@font/roboto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/normal_font"
             android:text="@string/email_address"
-            android:textSize="@dimen/text_size"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/emailAddressText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView"
-            app:layout_constraintVertical_bias="1.0" />
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/emailAddressText"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/large_vertical_margin"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:inputType="textEmailAddress"
-            android:textSize="@dimen/text_size"
-            app:layout_constraintBottom_toTopOf="@+id/passwordLabel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            style="@style/normal_font"
+            android:inputType="textEmailAddress" />
 
         <TextView
             android:id="@+id/passwordLabel"
-            style="@style/Widget.AppCompat.TextView"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/vertical_margin"
-            android:fontFamily="@font/roboto"
+            style="@style/normal_font"
             android:text="@string/password"
-            android:textSize="@dimen/text_size"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/passwordText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/passwordText"
-            style="@style/Widget.AppCompat.EditText"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/large_vertical_margin"
-            android:ems="10"
-            android:fontFamily="@font/roboto"
-            android:inputType="textPassword"
-            android:textSize="@dimen/text_size"
-            app:layout_constraintBottom_toTopOf="@+id/createAccountButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            style="@style/normal_font"
+            android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/createAccountButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:fontFamily="@font/roboto"
-            android:text="@string/create_account"
-            android:textSize="@dimen/text_size"
-            app:layout_constraintBaseline_toBaselineOf="@+id/loginButton"
-            app:layout_constraintEnd_toStartOf="@+id/loginButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/vertical_margin">
 
-        <Button
-            android:id="@+id/loginButton"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/large_horizontal_margin"
-            android:layout_marginEnd="@dimen/large_horizontal_margin"
-            android:layout_marginBottom="@dimen/large_vertical_margin"
-            android:fontFamily="@font/roboto"
-            android:text="@string/login"
-            android:textSize="@dimen/text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/createAccountButton" />
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/normal_font"
+                android:text="@string/create_account"
+                android:layout_weight="1" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/normal_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
 </layout>

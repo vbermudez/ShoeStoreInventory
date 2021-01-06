@@ -18,4 +18,9 @@ class ShoeListViewModel: ViewModel() {
         shoeList.value?.add(shoe)
         shoeList.value = shoeList.value
     }
+
+    fun addShoe(shoe: Shoe) {
+        shoeList.value?.add(shoe)
+        shoeList.value = shoeList.value
+    }
 }
