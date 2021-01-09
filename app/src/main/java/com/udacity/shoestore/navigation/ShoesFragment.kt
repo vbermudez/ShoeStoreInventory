@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesBinding
@@ -81,7 +82,15 @@ class ShoesFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
-                || super.onOptionsItemSelected(item)
+        //return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+        //        || super.onOptionsItemSelected(item)
+
+        return when (item.itemId) {
+            R.id.logoutMenu -> {
+                requireView().findNavController().navigate(ShoesFragmentDirections.actionShoesFragmentToLoginFragment())
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }
